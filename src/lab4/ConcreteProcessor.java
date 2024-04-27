@@ -1,5 +1,8 @@
 package lab4;
 
+/**Concrete implementation of request class
+ *
+ */
 public class ConcreteProcessor implements Processor {
     private String name;
     private int level;
