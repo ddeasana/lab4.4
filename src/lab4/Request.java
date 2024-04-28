@@ -15,7 +15,7 @@ public class Request {
         this.type = type;
         switch(type){
             case ("GET"):{this.level = 1;break;}
-            case ("POST"):{this.level = 4;break;}
+            case ("POST"):{this.level = 3;break;}
             default: System.out.println("Unknown type, assumed to be level 1 "); this.level = 1;break;
         }
     }

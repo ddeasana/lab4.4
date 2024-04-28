@@ -41,7 +41,11 @@ public class ConcreteProcessor implements Processor {
     public void processRequest(Request request) {
         System.out.println(name + " of level " + level + " got the request of level " + request.getLevel());
         if (request.getLevel()<=level){
-            System.out.println("Request was processed by " +name+ ". Type: " + request.getType());
+            switch(request.getType()){
+                case ("GET"):{System.out.println("Request was processed by " +name+ ". Type: " + request.getType() + "; returned some data");break;}
+                case ("POST"):{System.out.println("Request was processed by " +name+ ". Type: " + request.getType() + ". The web server accepted tha data");break;}
+                default: System.out.println("Request was processed by " +name+ ". Type: " + request.getType());break;
+            }
         }
         else{
             if(nextProcessor== null){ System.out.println("The request cannot be completed!");}
